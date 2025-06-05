@@ -20,6 +20,7 @@ public class FixPriceProduct extends Product {
 
         return true; // Товар с фиксированной ценой является специальным
     }
+
     //Переопределение методов интерфейса Searchable
     @Override
     public String getSearchableName() {

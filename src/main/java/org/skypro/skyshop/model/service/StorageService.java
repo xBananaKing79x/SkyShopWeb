@@ -43,6 +43,7 @@ public class StorageService {
         articles.put(UUID.randomUUID(), new Article(UUID.randomUUID(), "Как выбрать яблоки", "Статья о том, как правильно выбирать яблоки."));
         articles.put(UUID.randomUUID(), new Article(UUID.randomUUID(), "Польза молока", "Статья о пользе молока."));
     }
+
     // Метод для получения всех объектов Searchable
     public Collection<Searchable> getAllSearchables() {
         Collection<Searchable> allSearchables = new ArrayList<>();
