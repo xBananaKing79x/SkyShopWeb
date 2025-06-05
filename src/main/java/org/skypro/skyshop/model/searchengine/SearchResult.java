@@ -2,6 +2,7 @@ package org.skypro.skyshop.model.searchengine;
 
 import org.skypro.skyshop.model.article.Article;
 import org.skypro.skyshop.model.search.Searchable;
+
 import java.util.UUID;
 
 public class SearchResult {

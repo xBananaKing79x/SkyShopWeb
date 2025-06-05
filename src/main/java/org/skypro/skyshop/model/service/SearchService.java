@@ -1,6 +1,8 @@
 package org.skypro.skyshop.model.service;
+
 import org.skypro.skyshop.model.searchengine.SearchResult;
 import org.springframework.stereotype.Service;
+
 import java.util.Collection;
 import java.util.stream.Collectors;
 
@@ -12,6 +14,7 @@ public class SearchService {
 
         this.storageService = storageService;
     }
+
     // Метод поиска
     public Collection<SearchResult> search(String pattern) {
         // Получаем все объекты типа Searchable

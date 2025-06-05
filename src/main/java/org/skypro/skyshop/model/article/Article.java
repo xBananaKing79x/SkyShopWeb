@@ -17,10 +17,12 @@ public class Article implements Searchable {
         this.text = articleText;
 
     }
+
     @Override
-public UUID getId(){
+    public UUID getId() {
         return this.id;
-}
+    }
+
     @Override
     public String getProductName() {
         return title;
@@ -33,6 +35,7 @@ public UUID getId(){
     public String getArticleText() {
         return text;
     }
+
     //Переопределяем метод toString
     @Override
     public String toString() {
@@ -67,7 +70,7 @@ public UUID getId(){
             Article other = (Article) obj;
             return false;
         }
-        if (obj instanceof Article){
+        if (obj instanceof Article) {
             return Objects.equals(this.getArticleName(), ((Article) obj).getArticleName());
         } else {
             return false;

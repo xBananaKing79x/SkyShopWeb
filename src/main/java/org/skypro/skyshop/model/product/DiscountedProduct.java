@@ -7,7 +7,7 @@ public class DiscountedProduct extends Product {
     private double basePrice;//Базовая цена товара
     private int discountPercentage;//Величина скидки
 
-    public DiscountedProduct(UUID id,String productName, double basePrice, int discountPercentage) {
+    public DiscountedProduct(UUID id, String productName, double basePrice, int discountPercentage) {
         super(id, productName);
         this.getId();
         if (basePrice > 0) {
