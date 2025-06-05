@@ -1,8 +1,6 @@
 package org.skypro.skyshop.model.service;
-
 import org.skypro.skyshop.model.searchengine.SearchResult;
 import org.springframework.stereotype.Service;
-
 import java.util.Collection;
 import java.util.stream.Collectors;
 

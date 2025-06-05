@@ -9,8 +9,6 @@ public abstract class Product implements Searchable {
 
     String productName;
     private final UUID id;//Уникальный идентификатор
-
-
     public Product(UUID id, String productName) {
         this.id = id;
         if (productName == null || productName.isBlank()) {

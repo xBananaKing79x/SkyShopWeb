@@ -15,7 +15,6 @@ public interface Searchable {
     // Дефолтный метод для строкового представления
     default String getStringRepresentation() {
         return getSearchableName() + " — " + getType();
-
     }
     UUID getId();
 
