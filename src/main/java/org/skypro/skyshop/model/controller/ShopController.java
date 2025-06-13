@@ -35,7 +35,7 @@ public class ShopController {
     }
 
     // Метод добавления продукта в корзину
-    @GetMapping("/{id}")
+    @GetMapping("/basket/{id}")
     public String addProduct(@PathVariable("id") UUID id) {
         basketService.addProductToBasket(id);
         return "Продукт успешно добавлен";

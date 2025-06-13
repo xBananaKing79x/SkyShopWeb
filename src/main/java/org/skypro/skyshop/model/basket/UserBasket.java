@@ -1,8 +1,12 @@
 package org.skypro.skyshop.model.basket;
 
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.SessionScope;
+
 import java.util.Collections;
 import java.util.List;
-
+@SessionScope
+@Component
 public class UserBasket {
     private final List<BasketItem> items;
     private final double total;

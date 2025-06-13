@@ -4,7 +4,6 @@ import org.skypro.skyshop.model.article.Article;
 import org.skypro.skyshop.model.search.Searchable;
 
 import java.util.UUID;
-
 public class SearchResult {
     private final UUID id;
     private final String name;
