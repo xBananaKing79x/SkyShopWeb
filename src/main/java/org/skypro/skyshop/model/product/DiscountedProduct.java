@@ -1,11 +1,14 @@
 package org.skypro.skyshop.model.product;
 
+import java.util.UUID;
+
 public class DiscountedProduct extends Product {
     private double basePrice;//Базовая цена товара
     private int discountPercentage;//Величина скидки
 
-    public DiscountedProduct(String productName, double basePrice, int discountPercentage) {
-        super(productName);
+    public DiscountedProduct(UUID id, String productName, double basePrice, int discountPercentage) {
+        super(id, productName);
+        this.getId();
         if (basePrice > 0) {
             this.basePrice = basePrice;
         } else throw new IllegalArgumentException("Цена товара должна быть положительным числом.");

@@ -1,10 +1,14 @@
 package org.skypro.skyshop.model.product;
 
+import java.util.UUID;
+
 public class SimpleProduct extends Product {
     private double productPrice;
+    private final UUID id;
 
-    public SimpleProduct(String productName, double productPrice) {
-        super(productName);
+    public SimpleProduct(UUID id, String productName, double productPrice) {
+        super(id, productName);
+        this.id = id;
         if (productPrice > 0) {
             this.productPrice = productPrice;
         } else throw new IllegalArgumentException("Цена товара должна быть положительным числом.");
