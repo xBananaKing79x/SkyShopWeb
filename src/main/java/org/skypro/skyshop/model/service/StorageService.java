@@ -14,12 +14,10 @@ import java.util.*;
 public class StorageService {
     private final Map<UUID, Product> products; // Хранилище продуктов
     private final Map<UUID, Article> articles; // Хранилище статей
-    private final Map<UUID, Product> availableProducts;
     // Конструктор
-    public StorageService(Map<UUID, Product> availableProducts) {
+    public StorageService(Map<UUID, Product> products) {
         this.products = new HashMap<>();
         this.articles = new HashMap<>();
-        this.availableProducts = availableProducts;
         populateTestData(); // Заполняем тестовыми данными
     }
 
@@ -54,6 +52,6 @@ public class StorageService {
     }
     // Метод получения продукта по ID
     public Optional<Product> getProductById(UUID id) {
-        return Optional.ofNullable(availableProducts.get(id));
+        return Optional.ofNullable(products.get(id));
     }
 }

@@ -4,8 +4,6 @@ import org.skypro.skyshop.model.product.Product;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
-@Component
-@SessionScope
 public class BasketItem {
     private final Product product;
     private final int quantity;
