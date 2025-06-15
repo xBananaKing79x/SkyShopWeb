@@ -17,10 +17,6 @@ import java.util.UUID;
 
 @RestController // Аннотация для REST-контроллера
 public class ShopController {
-    @ExceptionHandler(NoSuchProductException.class)
-    public ResponseEntity<String> noSuchProductExeptionHandler (NoSuchProductException message){
-        return ResponseEntity.badRequest().body(message.getMessage());
-    }
     private final StorageService storageService; // Внедрение сервиса через конструктор
     private final SearchService searchService;
     private final BasketService basketService;
