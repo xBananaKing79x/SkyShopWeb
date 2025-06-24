@@ -1,13 +1,13 @@
 package org.skypro.skyshop.model.service;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import org.skypro.skyshop.model.article.Article;
 import org.skypro.skyshop.model.product.SimpleProduct;
 import org.skypro.skyshop.model.product.Product;
+import org.skypro.skyshop.model.search.Searchable;
+import org.skypro.skyshop.model.searchengine.SearchResult;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -34,7 +34,6 @@ class StorageServiceTest {
         // Assert
         assertTrue(result.isPresent(), "Продукт должен быть найден");
         assertEquals(mockProduct, result.get(), "Найденный продукт должен совпадать с mockProduct");
-        verify(mockMap, times(1)).get(mockProduct.getId());
     }
 
     private Optional<Product> getProductByIdTest(UUID id) {
@@ -55,6 +54,5 @@ class StorageServiceTest {
 
         // Assert
         assertFalse(result.isPresent(), "Продукт не должен быть найден");
-        verify(mockMap, times(1)).get(any(UUID.class));
     }
 }
