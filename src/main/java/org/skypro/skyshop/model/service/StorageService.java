@@ -1,6 +1,7 @@
 package org.skypro.skyshop.model.service;
 
 import org.skypro.skyshop.model.article.Article;
+import org.skypro.skyshop.model.exeptions.NoSuchProductException;
 import org.skypro.skyshop.model.product.DiscountedProduct;
 import org.skypro.skyshop.model.product.FixPriceProduct;
 import org.skypro.skyshop.model.product.Product;
@@ -16,7 +17,7 @@ public class StorageService {
     private final Map<UUID, Article> articles; // Хранилище статей
 
     // Конструктор
-    public StorageService(Map<UUID, Product> mockMap) {
+    public StorageService() {
         this.products = new HashMap<>();
         this.articles = new HashMap<>();
         populateTestData(); // Заполняем тестовыми данными
