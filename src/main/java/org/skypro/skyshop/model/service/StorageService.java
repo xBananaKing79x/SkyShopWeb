@@ -15,7 +15,7 @@ public class StorageService {
     private final Map<UUID, Product> products; // Хранилище продуктов
     private final Map<UUID, Article> articles; // Хранилище статей
     // Конструктор
-    public StorageService(Map<UUID, Product> products) {
+    public StorageService() {
         this.products = new HashMap<>();
         this.articles = new HashMap<>();
         populateTestData(); // Заполняем тестовыми данными
