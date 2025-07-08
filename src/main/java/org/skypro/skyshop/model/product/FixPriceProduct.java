@@ -7,7 +7,6 @@ public class FixPriceProduct extends Product {
 
     public FixPriceProduct(UUID id, String name) {
         super(id, name);
-        this.getId();
     }
 
     @Override

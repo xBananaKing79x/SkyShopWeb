@@ -8,7 +8,6 @@ public class DiscountedProduct extends Product {
 
     public DiscountedProduct(UUID id, String productName, double basePrice, int discountPercentage) {
         super(id, productName);
-        this.getId();
         if (basePrice > 0) {
             this.basePrice = basePrice;
         } else throw new IllegalArgumentException("Цена товара должна быть положительным числом.");
