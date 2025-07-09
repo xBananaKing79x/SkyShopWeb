@@ -34,9 +34,15 @@ public class StorageService {
     // Приватный метод для заполнения тестовыми данными
     private void populateTestData() {
         // Добавляем продукты
-        products.put(UUID.randomUUID(), new SimpleProduct(UUID.randomUUID(), "Яблоки", 50.0));
-        products.put(UUID.randomUUID(), new DiscountedProduct(UUID.randomUUID(), "Молоко", 100.0, 20));
-        products.put(UUID.randomUUID(), new FixPriceProduct(UUID.randomUUID(), "Хлеб"));
+        UUID productId1 = UUID.randomUUID();
+        UUID productId2 = UUID.randomUUID();
+        UUID productId3 = UUID.randomUUID();
+        SimpleProduct simpleProduct = new SimpleProduct(productId1, "Яблоки", 50.0);
+        DiscountedProduct discountedProduct = new DiscountedProduct(productId2, "Молоко", 100.0, 20);
+        FixPriceProduct fixPriceProduct = new FixPriceProduct(productId3, "Хлеб");
+        products.put(productId1,simpleProduct);
+        products.put(productId2, discountedProduct);
+        products.put(productId3, fixPriceProduct);
 
         // Добавляем статьи
         articles.put(UUID.randomUUID(), new Article(UUID.randomUUID(), "Как выбрать яблоки", "Статья о том, как правильно выбирать яблоки."));
