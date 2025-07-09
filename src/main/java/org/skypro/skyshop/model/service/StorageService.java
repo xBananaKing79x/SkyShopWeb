@@ -45,8 +45,12 @@ public class StorageService {
         products.put(productId3, fixPriceProduct);
 
         // Добавляем статьи
-        articles.put(UUID.randomUUID(), new Article(UUID.randomUUID(), "Как выбрать яблоки", "Статья о том, как правильно выбирать яблоки."));
-        articles.put(UUID.randomUUID(), new Article(UUID.randomUUID(), "Польза молока", "Статья о пользе молока."));
+        UUID articleID1 = UUID.randomUUID();
+        UUID articleID2 = UUID.randomUUID();
+        Article article1 = new Article(articleID1, "Как выбрать яблоки", "Статья о том, как правильно выбирать яблоки.");
+        Article article2 = new Article(articleID2, "Польза молока", "Статья о пользе молока.");
+        articles.put(articleID1, article1);
+        articles.put(articleID2,article2);
     }
 
     // Метод для получения всех объектов Searchable
