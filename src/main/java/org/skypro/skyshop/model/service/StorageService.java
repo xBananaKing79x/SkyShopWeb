@@ -1,6 +1,7 @@
 package org.skypro.skyshop.model.service;
 
 import org.skypro.skyshop.model.article.Article;
+import org.skypro.skyshop.model.exeptions.NoSuchProductException;
 import org.skypro.skyshop.model.product.DiscountedProduct;
 import org.skypro.skyshop.model.product.FixPriceProduct;
 import org.skypro.skyshop.model.product.Product;
@@ -14,6 +15,7 @@ import java.util.*;
 public class StorageService {
     private final Map<UUID, Product> products; // Хранилище продуктов
     private final Map<UUID, Article> articles; // Хранилище статей
+
     // Конструктор
     public StorageService() {
         this.products = new HashMap<>();
@@ -60,6 +62,7 @@ public class StorageService {
         allSearchables.addAll(articles.values());
         return allSearchables;
     }
+
     // Метод получения продукта по ID
     public Optional<Product> getProductById(UUID id) {
         return Optional.ofNullable(products.get(id));

@@ -1,8 +1,7 @@
 package org.skypro.skyshop.model.basket;
 
 import org.skypro.skyshop.model.product.Product;
-import org.springframework.stereotype.Component;
-import org.springframework.web.context.annotation.SessionScope;
+
 
 public class BasketItem {
     private final Product product;
